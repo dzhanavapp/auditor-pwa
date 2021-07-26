@@ -1,0 +1,51 @@
+{
+  "name": "auditor-pwa",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build --spa && nuxt generate",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
+    "lint": "yarn lint:js"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.13.6",
+    "@nuxtjs/pwa": "^3.3.5",
+    "core-js": "^3.15.1",
+    "lodash.debounce": "^4.0.8",
+    "normalize.css": "^8.0.1",
+    "nuxt": "^2.15.7",
+    "qrcode": "^1.4.4",
+    "vue-barcode-reader": "^0.0.3",
+    "vue-bus": "^1.2.1",
+    "vue-chat-scroll": "^1.4.0",
+    "vue-shortkey": "^3.1.7",
+    "vue-toast-notification": "^0.6.2",
+    "vuex-persistedstate": "^4.0.0-beta.3"
+  },
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.14.7",
+    "@nuxtjs/eslint-config": "^6.0.1",
+    "@nuxtjs/eslint-module": "^3.0.2",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.29.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-nuxt": "^2.0.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-vue": "^7.12.1",
+    "postcss-css-variables": "^0.17.0",
+    "postcss-custom-media": "^7.0.8",
+    "postcss-each": "^0.10.0",
+    "postcss-extend": "^1.0.5",
+    "postcss-extend-rule": "^3.0.0",
+    "postcss-import": "^13.0.0",
+    "postcss-inline-svg": "^4.1.0",
+    "postcss-move-props-to-bg-image-query": "^4.0.0",
+    "postcss-nested": "^4.2.3",
+    "postcss-nested-ancestors": "^2.0.0",
+    "postcss-preset-env": "^6.7.0",
+    "prettier": "^2.3.2"
+  }
+}
