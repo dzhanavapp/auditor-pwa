@@ -27,7 +27,7 @@ export default {
     async handleLogin() {
       await this.$store.dispatch(`user/${LOGIN_USER}`, this.form)
       this.form = {}
-      this.$router.push('/')
+      this.$router.push('/store-select')
     },
   },
 }

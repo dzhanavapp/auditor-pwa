@@ -1,9 +1,7 @@
 import { SET_USER, LOGIN_USER } from './types'
 
 export const state = () => ({
-  data: {
-    token: 'asd',
-  },
+  data: null,
 })
 
 export const mutations = {

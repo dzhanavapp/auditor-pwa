@@ -28,3 +28,7 @@ body {
 .mb-8 {
     margin-bottom: 16px;
 }
+
+video {
+    width: 100%;
+}

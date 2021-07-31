@@ -42,5 +42,10 @@ export default {
   box-sizing: border-box;
   font-size: 16px;
   background-color: var(--color-gray-light);
+
+  &:focus {
+    outline: none;
+    border: 2px solid var(--color-primary);
+  }
 }
 </style>
