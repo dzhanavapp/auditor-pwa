@@ -1,18 +1,19 @@
 <template>
   <div class="modal">
-    <StreamBarcodeReader @decode="onDecode"></StreamBarcodeReader>
+    <DynamicCodeReader @decode="onDecode" />
+    <!-- <StreamBarcodeReader @decode="onDecode"></StreamBarcodeReader> -->
     <h2 class="modal__text">Отсканируйте код магазина</h2>
   </div>
 </template>
 
 <script>
-import { StreamBarcodeReader } from 'vue-barcode-reader'
+// import { StreamBarcodeReader } from 'vue-barcode-reader'
 import debounce from 'lodash.debounce'
 import { SET_STORE } from '~/store/types'
 
 export default {
   name: 'StoreSelect',
-  components: { StreamBarcodeReader },
+  // components: { StreamBarcodeReader },
   validate({ store, redirect }) {
     if (store.state.storehouse.data) redirect('/')
 
@@ -23,6 +24,7 @@ export default {
   },
   methods: {
     async onDecode(code) {
+      console.log(code, 'handled code')
       try {
         const store = await this.$axios.$get(
           `/api/mob_auditor/store_selection/?store_cod=${code}&token=${this.$store.state.user?.data?.token}`

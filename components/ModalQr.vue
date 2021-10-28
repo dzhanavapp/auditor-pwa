@@ -1,6 +1,7 @@
 <template>
   <div class="modal">
-    <StreamBarcodeReader @decode="onDecode"></StreamBarcodeReader>
+    <DynamicCodeReader @decode="onDecode" />
+    <!-- <StreamBarcodeReader @decode="onDecode"></StreamBarcodeReader> -->
     <div class="modal__button">
       <Button block primary @click="$emit('close')"> Закрыть </Button>
     </div>
@@ -8,11 +9,11 @@
 </template>
 
 <script>
-import { StreamBarcodeReader } from 'vue-barcode-reader'
+// import { StreamBarcodeReader } from 'vue-barcode-reader'
 
 export default {
   name: 'ModalQr',
-  components: { StreamBarcodeReader },
+  // components: { StreamBarcodeReader },
   mounted() {
     const el = document.querySelector('*:focus')
     el?.blur()

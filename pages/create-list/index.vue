@@ -27,7 +27,7 @@ export default {
   async created() {
     try {
       const res = await this.$axios.$get(
-        `https://azs.21baza.ru/api/mob_auditor/add_document/?store_cod=${this.$store.state.storehouse.data?.store_cod}&token=${this.$store.state.user?.data?.token}`
+        `https://new.21baza.ru/api/mob_auditor/add_document/?store_cod=${this.$store.state.storehouse.data?.store_cod}&token=${this.$store.state.user?.data?.token}`
       )
 
       this.list = res
@@ -62,7 +62,7 @@ export default {
     async closeAudit() {
       try {
         await this.$axios.$get(
-          `https://azs.21baza.ru/api/mob_auditor/close_document/?store_cod=${this.$store.state.storehouse.data?.store_cod}&token=${this.$store.state.user?.data?.token}`
+          `https://new.21baza.ru/api/mob_auditor/close_document/?store_cod=${this.$store.state.storehouse.data?.store_cod}&token=${this.$store.state.user?.data?.token}`
         )
 
         this.$router.push('/')
@@ -82,7 +82,7 @@ export default {
         if (!amount) return
 
         const product = await this.$axios.$get(
-          `https://azs.21baza.ru/api/mob_auditor/add_document/items/?store_cod=${
+          `https://new.21baza.ru/api/mob_auditor/add_document/items/?store_cod=${
             this.$store.state.storehouse.data?.store_cod
           }&token=${
             this.$store.state.user?.data?.token
@@ -111,7 +111,7 @@ export default {
     async sendProductAmount(amount) {
       try {
         const res = await this.$axios.$get(
-          `https://azs.21baza.ru/mobi/revision/add_document/items/?documentId=${this.documentId}&qr=${this.productId}&amount=${amount}`
+          `https://new.21baza.ru/mobi/revision/add_document/items/?documentId=${this.documentId}&qr=${this.productId}&amount=${amount}`
         )
 
         this.products = res
@@ -127,7 +127,7 @@ export default {
     async closeRevision() {
       try {
         await this.$axios.$get(
-          'https://azs.21baza.ru/api/mobi/revision/close_document/?documentId=' +
+          'https://new.21baza.ru/api/mobi/revision/close_document/?documentId=' +
             this.documentId
         )
         window.location.reload()

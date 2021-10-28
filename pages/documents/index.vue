@@ -28,7 +28,7 @@ export default {
   async created() {
     try {
       const documents = await this.$axios.$get(
-        `https://azs.21baza.ru/api/mob_auditor/list_document/?store_cod=${this.$store.state.storehouse.data?.store_cod}&token=${this.$store.state.user?.data?.token}`
+        `https://new.21baza.ru/api/mob_auditor/list_document/?store_cod=${this.$store.state.storehouse.data?.store_cod}&token=${this.$store.state.user?.data?.token}`
       )
 
       this.documents = documents
