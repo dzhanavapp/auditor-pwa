@@ -70,7 +70,7 @@ export default {
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
-    baseURL: 'https://new.21baza.ru/',
+    baseURL: 'https://azs.21baza.ru/',
     headers: {
       post: {
         'content-type': 'application/json;charset=utf-8',

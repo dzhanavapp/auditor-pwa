@@ -5,6 +5,14 @@ body {
     background-color: #fff;
 }
 
+.component-barcode-scanner {
+    min-width: unset !important;
+}
+
+.component-barcode-scanner select {
+    display: none;
+}
+
 .m-0  {
     margin: 0;
 }

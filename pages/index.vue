@@ -40,7 +40,7 @@ export default {
     async createDocument() {
       try {
         const res = await this.$axios.$get(
-          'https://new.21baza.ru/mobi/revision/add_document/?storeId=' +
+          'https://azs.21baza.ru/mobi/revision/add_document/?storeId=' +
             this.$store.state.data?.id
         )
 
