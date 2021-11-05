@@ -3443,10 +3443,16 @@ duplexify@^3.4.2, duplexify@^3.6.0:
     readable-stream "^2.0.0"
     stream-shift "^1.0.0"
 
-dynamsoft-javascript-barcode@^8.6.3:
-  version "8.6.3"
-  resolved "https://registry.yarnpkg.com/dynamsoft-javascript-barcode/-/dynamsoft-javascript-barcode-8.6.3.tgz#749def1a826f16e67c8eb76d51a899dfe9904b3b"
-  integrity sha512-+2bcTQ0VD9fry6i0dOPwTlEIV9TV+3Ic5HVg3LmB0kViXyyvpdIuAthMal7nxTW7bQbwAQCGYpDqSUEWqbPQIw==
+dynamsoft-camera-enhancer@2.0.3:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/dynamsoft-camera-enhancer/-/dynamsoft-camera-enhancer-2.0.3.tgz#a68ea225563f8e3888f552447693d7a2b5f97d4f"
+  integrity sha512-B8C72P2sg2wPPFQR/lDt1GT//qKamKonDYiIIN5DeIrRsSefw6hFraQly0nXCDGOxkyFfTVMZz7r8XS66Dwtug==
+
+"dynamsoft-javascript-barcode@git://github.com/dzhanavapp/javascript-barcode.git":
+  version "8.8.3"
+  resolved "git://github.com/dzhanavapp/javascript-barcode.git#f3944564d9b3db7c0af615f56c7aa41708f13f5e"
+  dependencies:
+    dynamsoft-camera-enhancer "2.0.3"
 
 ee-first@1.1.1:
   version "1.1.1"
