@@ -47,7 +47,7 @@ export default {
   },
   methods: {
     handleBlur() {
-      this.focusInput()
+      setTimeout(() => this.focusInput(), 200)
     },
     focusInput() {
       this.$refs.input?.focus()

@@ -16,9 +16,6 @@
     </svg>
     <video class="dbrScanner-video" playsinline="true"></video>
     <canvas class="dbrScanner-cvs-drawarea"></canvas>
-    <div class="dbrScanner-cvs-scanarea">
-      <div class="dbrScanner-scanlight" style="display: none"></div>
-    </div>
     <select class="dbrScanner-sel-camera"></select>
     <select class="dbrScanner-sel-resolution"></select>
   </div>
@@ -38,6 +35,12 @@ export default {
     try {
       const scanner = await (this.pScanner =
         this.pScanner || BarcodeScanner.createInstance())
+
+      const settings = await scanner.getRuntimeSettings()
+      settings.furtherModes.grayscaleTransformationModes[0] = 2
+      settings.furtherModes.grayscaleTransformationModes[1] = 1
+      await scanner.updateRuntimeSettings(settings)
+
       if (this.bDestroyed) {
         scanner.destroy()
         return
